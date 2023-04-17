@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'curddjango.wsgi.application'
 
 DATABASES = {
    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django-curd',
+        'ENGINE': 'django.db.backends.postgresql',  # pip install psycopg
+        'NAME': 'sistemasuni_django_curd',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'PASSWORD': '',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }

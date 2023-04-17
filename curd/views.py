@@ -7,7 +7,6 @@ from django.contrib import messages
 def createView(request):
     return render(request,'create.html')
 
-
 def store(request):
     emp = Emp()
     emp.emp_name = request.POST.get('emp_name')
@@ -17,8 +16,6 @@ def store(request):
     messages.success(request, "Employee Added Successfully")
     return redirect('/create')
 
-
-
 def index(request):
     emp = Emp.objects.all()
     return render(request, 'index.html',{'emp':emp})
@@ -26,8 +23,6 @@ def index(request):
 def updateView(request,pk):
     emp = Emp.objects.get(id = pk)
     return render(request,'update.html',{'emp':emp})
-
-
 
 def update(request,pk):
     print('in')
@@ -44,7 +39,6 @@ def deleteEmp(request, pk):
     emp.delete()
     messages.success(request, "Employee Deleted Successfully")
     return redirect('/')
-
 
 def viewEmp(request,pk):
     emp = Emp.objects.get(id = pk)
